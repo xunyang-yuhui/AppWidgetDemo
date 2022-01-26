@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_shape_c20_tc000000_bcc000000">
+
+    <TextView
+        android:id="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_50"
+        android:textColor="@color/color_ffe552"
+        android:text="00"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hour"
+        android:layout_centerHorizontal="true"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_50"
+        android:textStyle="bold"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:id="@+id/tv_am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_minute"
+        android:layout_alignRight="@id/tv_minute"
+        android:layout_marginBottom="25dp"
+        android:text="Pm"
+        android:textColor="@color/color_565656"
+        android:textSize="@dimen/sp_24" />
+
+</RelativeLayout>

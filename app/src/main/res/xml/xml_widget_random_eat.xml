@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/widget_layout_random_eat"
+    android:minWidth="250dp"
+    android:minHeight="110dp"
+    android:previewImage="@drawable/pre_random_eat"
+    android:updatePeriodMillis="1800000">
+</appwidget-provider>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyTestApplication</string>
+    <string name="str_notification_title">通知标题</string>
+    <string name="str_notification_content">通知内容</string>
+    <string name="str_is_friday">不是，还有%1$s天</string>
+    <string name="str_is_friday_yes">是的，今天是周五呀</string>
+    <string name="str_label_friday">今天是周五吗</string>
+    <string name="str_label_timeclock">时钟小组件</string>
+    <string name="str_label_random_eat">吃什么？</string>
+    <string name="str_setting_hide_task_list">是否要在\"多任务列表中\"隐藏？</string>
+
+</resources>

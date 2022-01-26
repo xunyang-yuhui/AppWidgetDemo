@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_shape_r15_ct000000_be6000000">
+
+    <TextView
+        android:id="@+id/tv_title_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape_r15_c80ffe552"
+        android:text="follow your heart"
+        android:textSize="8sp"
+        android:textColor="@color/color_80ffe552"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_time_eat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:layout_centerVertical="true"
+        android:text="早餐吃："
+        />
+
+    <TextView
+        android:id="@+id/tv_title_eat_what"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_24"
+        android:textColor="#ffe552"
+        android:text="豆浆加油条"
+        android:layout_alignBaseline="@id/tv_title_time_eat"
+        android:layout_alignLeft="@id/tv_title_sign"
+        android:layout_centerInParent="true"
+        />
+
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_shape_r15_cffe552"
+        android:gravity="center"
+        android:text="再选一次"
+        android:textColor="#2c2c2c"
+        android:enabled="true"
+        android:textSize="@dimen/sp_14" />
+
+
+</RelativeLayout>

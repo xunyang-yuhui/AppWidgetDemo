@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mytestapplication">
+
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyStyle">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.base.BaseActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".module.setting.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".module.setting.RandomEatSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".module.setting.RandomEatDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".service.ForegroundService"/>
+
+        <!--今天是周五吗 组件-->
+        <receiver android:name=".widget.remote.UCFridayWidget"
+            android:label="@string/str_label_friday">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/xml_widget_friday"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/><!--必须得有这个action-->
+            </intent-filter>
+        </receiver>
+
+        <!--时钟 组件-->
+        <receiver android:name=".widget.remote.UCTimeWidget"
+            android:label="@string/str_label_timeclock">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/xml_widget_timeclock"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/><!--必须得有这个action-->
+            </intent-filter>
+        </receiver>
+
+        <!--吃什么 组件-->
+        <receiver android:name=".widget.remote.UCRandomEatWidget"
+            android:label="@string/str_label_random_eat">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/xml_widget_random_eat"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/><!--必须得有这个action-->
+                <action android:name="com.example.mytestapplication.ACTION.CHANGE_RANDOM_EAT"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
